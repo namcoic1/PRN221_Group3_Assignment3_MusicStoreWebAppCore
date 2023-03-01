@@ -1,7 +1,10 @@
+using SE1611_Group3_A3.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+builder.Services.AddSingleton<MusicStoreContext>();
 
 var app = builder.Build();
 

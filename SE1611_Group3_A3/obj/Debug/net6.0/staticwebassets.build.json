@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "MVuBrGvdNrF7dABO8eKIALi499uvBGzavRavL/RhffI=",
+  "Hash": "NxDtfIRrUchuRcwNhl1/ALirfvSnnAfRZDJLgzg6EPk=",
   "Source": "SE1611_Group3_A3",
   "BasePath": "_content/SE1611_Group3_A3",
   "Mode": "Default",
@@ -83,6 +83,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "D:\\ky7_Code\\PRN221_Code\\SE1611_Group3_A3\\wwwroot\\images\\music.png",
+      "SourceId": "SE1611_Group3_A3",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ky7_Code\\PRN221_Code\\SE1611_Group3_A3\\wwwroot\\",
+      "BasePath": "_content/SE1611_Group3_A3",
+      "RelativePath": "images/music.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Always",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\music.png"
     },
     {
       "Identity": "D:\\ky7_Code\\PRN221_Code\\SE1611_Group3_A3\\wwwroot\\js\\site.js",

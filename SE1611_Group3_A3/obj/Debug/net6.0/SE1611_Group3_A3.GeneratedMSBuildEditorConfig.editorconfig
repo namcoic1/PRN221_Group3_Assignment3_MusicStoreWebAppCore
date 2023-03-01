@@ -16,6 +16,26 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\ky7_Code\PRN221_Code\SE1611_Group3_A3
 build_property._RazorSourceGeneratorDebug = 
 
+[D:/ky7_Code/PRN221_Code/SE1611_Group3_A3/Pages/Albums/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWxidW1zXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ky7_Code/PRN221_Code/SE1611_Group3_A3/Pages/Albums/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWxidW1zXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ky7_Code/PRN221_Code/SE1611_Group3_A3/Pages/Albums/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWxidW1zXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ky7_Code/PRN221_Code/SE1611_Group3_A3/Pages/Albums/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWxidW1zXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ky7_Code/PRN221_Code/SE1611_Group3_A3/Pages/Albums/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWxidW1zXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/ky7_Code/PRN221_Code/SE1611_Group3_A3/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -30,6 +50,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/ky7_Code/PRN221_Code/SE1611_Group3_A3/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ky7_Code/PRN221_Code/SE1611_Group3_A3/Pages/Shopping/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hvcHBpbmdcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/ky7_Code/PRN221_Code/SE1611_Group3_A3/Pages/_ViewImports.cshtml]
