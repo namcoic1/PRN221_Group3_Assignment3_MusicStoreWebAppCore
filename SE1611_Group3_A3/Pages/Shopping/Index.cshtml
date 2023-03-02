@@ -4,56 +4,98 @@
     ViewData["Title"] = "Shopping";
 }
 
-<div style="margin: 20px 0 0 0;">
+<section style="margin: 20px 0 0 0;">
     <h1>Shopping</h1>
     <div>
-        <div style="display: flex;">
-            Genre name:
-            <select>
-                <option>---All---</option>
-                @foreach (var genre in Model.genres)
-                {
-                    <option>@genre.Name</option>
-                }
-            </select>&nbsp;
-            <form>
-                Find by name:<input type="text" />
-                <button class="bg-primary text-white">Search</button>&nbsp;|&nbsp;<a href="">Back to full list</a>
+        <div>
+            <form asp-page="./Index" method="get">
+                Genre name:
+                <select name="genreId">
+                    @if (Model.GenreId == -1)
+                    {
+                        <option selected value="-1">---All---</option>
+                    }
+                    else
+                    {
+                        <option value="-1">---All---</option>
+                    }
+                    @foreach (var genre in Model.genres)
+                    {
+                        @if (genre.GenreId == Model.GenreId)
+                        {
+                            <option selected value="@genre.GenreId">@genre.Name</option>
+                        }
+                        else
+                        {
+                            <option value="@genre.GenreId">@genre.Name</option>
+                        }
+                    }
+                </select>&nbsp;
+                <div class="form-actions no-color">
+                    <p>
+                        Find by name:
+                        <input type="text" name="search" value="@Model.Search" />
+                        <input type="submit" value="Search" class="btn btn-primary" /> |
+                        <a asp-page="./Index">Back to full List</a>
+                    </p>
+                </div>
             </form>
         </div>
     </div>
-    <div style="display: flex;justify-content: space-around;margin-top: 20px;max-width: 50%;">
-        <div>
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBnLImDOJCdoU0_RjcDFsuFyRyCw0P7Sqiow&usqp=CAU"
-                 style="width: 150px;height: 100px;">
-            <p>$8.99</p>
-            <p>Peter Pan</p>
-            <p>Artist: Thanh Pham</p>
-            <p>Genre: Rock</p>
-            <button class="bg-primary text-white">Add to cart</button>
-        </div>
-        <div>
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBnLImDOJCdoU0_RjcDFsuFyRyCw0P7Sqiow&usqp=CAU"
-                 style="width: 150px;height: 100px;">
-            <p>$8.99</p>
-            <p>Peter Pan</p>
-            <p>Artist: Thanh Pham</p>
-            <p>Genre: Rock</p>
-            <button class="bg-primary text-white">Add to cart</button>
-        </div>
-        <div>
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBnLImDOJCdoU0_RjcDFsuFyRyCw0P7Sqiow&usqp=CAU"
-                 style="width: 150px;height: 100px;">
-            <p>$8.99</p>
-            <p>Peter Pan</p>
-            <p>Artist: Thanh Pham</p>
-            <p>Genre: Rock</p>
-            <button class="bg-primary text-white">Add to cart</button>
-        </div>
+    <div class="mt-2 d-flex justify-content-around">
+
+        @foreach (var album in Model.albums)
+        {
+            <div>
+                <img src="@album.AlbumUrl" alt="image @album.Title" style="width: 150px;height: 100px;">
+                <p>@album.Price</p>
+                <p>@album.Title</p>
+                @foreach (var artist in Model.artists)
+                {
+                    @if (artist.ArtistId == album.ArtistId)
+                    {
+                        <p>Artist: @artist.Name</p>
+                    }
+                }
+                @foreach (var genre in Model.genres)
+                {
+                    @if (genre.GenreId == album.GenreId)
+                    {
+                        <p>Genre: @genre.Name</p>
+                    }
+                }
+                <button class="bg-secondary text-white">Add to cart</button>
+            </div>
+        }
     </div>
+
+
     <div style="margin-top: 50px;">
-        <button class="bg-primary text-white">Previous</button>
-        <button class="bg-primary text-white">Next</button>
-        Page:2/40
+        @{
+            var prevDisabled = !Model.albums.HasPreviousPage ? "disabled" : "";
+            var nextDisabled = !Model.albums.HasNextPage ? "disabled" : "";
+        }
+
+        <a asp-page="./Index"
+            asp-route-genreId ="@Model.GenreId"
+           asp-route-pageIndex="@(Model.albums.PageIndex - 1)"
+           asp-route-search="@Model.Search"
+           class="btn btn-primary @prevDisabled">
+            Previous
+        </a>
+        <a asp-page="./Index"
+           asp-route-genreId="@Model.GenreId"
+           asp-route-pageIndex="@(Model.albums.PageIndex + 1)"
+           asp-route-search="@Model.Search"
+           class="btn btn-primary @nextDisabled">
+            Next
+        </a>
+        @if (Model.PageIndex <= Model.TotalPage)
+        {
+            <p>Page: @Model.PageIndex/@Model.TotalPage</p>
+        }
     </div>
-</div>
+
+
+</section>
+
