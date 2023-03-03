@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\ky7_Code\\PRN221_Code\\SE1611_Group3_A3\\SE1611_Group3_A3.csproj": {}
+    "E:\\myC#\\myAssign3_WebRazor\\PRN221_Group3_Assignment3_MusicStoreWebAppCore\\SE1611_Group3_A3\\SE1611_Group3_A3.csproj": {}
   },
   "projects": {
-    "D:\\ky7_Code\\PRN221_Code\\SE1611_Group3_A3\\SE1611_Group3_A3.csproj": {
+    "E:\\myC#\\myAssign3_WebRazor\\PRN221_Group3_Assignment3_MusicStoreWebAppCore\\SE1611_Group3_A3\\SE1611_Group3_A3.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ky7_Code\\PRN221_Code\\SE1611_Group3_A3\\SE1611_Group3_A3.csproj",
+        "projectUniqueName": "E:\\myC#\\myAssign3_WebRazor\\PRN221_Group3_Assignment3_MusicStoreWebAppCore\\SE1611_Group3_A3\\SE1611_Group3_A3.csproj",
         "projectName": "SE1611_Group3_A3",
-        "projectPath": "D:\\ky7_Code\\PRN221_Code\\SE1611_Group3_A3\\SE1611_Group3_A3.csproj",
-        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-        "outputPath": "D:\\ky7_Code\\PRN221_Code\\SE1611_Group3_A3\\obj\\",
+        "projectPath": "E:\\myC#\\myAssign3_WebRazor\\PRN221_Group3_Assignment3_MusicStoreWebAppCore\\SE1611_Group3_A3\\SE1611_Group3_A3.csproj",
+        "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
+        "outputPath": "E:\\myC#\\myAssign3_WebRazor\\PRN221_Group3_Assignment3_MusicStoreWebAppCore\\SE1611_Group3_A3\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -92,7 +88,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.103\\RuntimeIdentifierGraph.json"
         }
       }
     }

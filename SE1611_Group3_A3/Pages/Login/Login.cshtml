@@ -1,0 +1,37 @@
+﻿@page
+@model SE1611_Group3_A3.Pages.Login.LoginModel
+@{
+    ViewData["Title"] = "Login page";
+}
+
+<style>
+    .title {
+        font-size:xx-large; 
+    }
+    .line-down-10 {
+        margin-bottom:10px;
+    }
+    .line-down-20 {
+        margin-bottom:20px;
+    }
+    .button-login {
+        background-color:#0099FF;
+        color:#FFFFFF;
+        border:1px solid #0099FF;
+    }
+    .message {
+        color: #FF6600;
+    }
+</style>
+
+<div class="text-start">
+    <h1 class="title line-down-10">Login User</h1>
+    <p class="line-down-10 message">@Model.message</p>
+    <form method="post" asp-page="/Login/Login">
+    <p class="line-down-10">Username</p>
+    <input class="line-down-20" asp-for="@Model.username"/>
+    <p class="line-down-10">Password</p>
+    <input class="line-down-10" asp-for="@Model.password"/>
+    <p><input class="button-login" type="submit" value="Login" /></p>
+    </form> 
+</div>
