@@ -268,4 +268,4 @@ D:\ky7_Code\PRN221_Code\SE1611_Group3_A3\obj\Debug\net6.0\refint\SE1611_Group3_A
 D:\ky7_Code\PRN221_Code\SE1611_Group3_A3\obj\Debug\net6.0\SE1611_Group3_A3.pdb
 D:\ky7_Code\PRN221_Code\SE1611_Group3_A3\obj\Debug\net6.0\SE1611_Group3_A3.genruntimeconfig.cache
 D:\ky7_Code\PRN221_Code\SE1611_Group3_A3\obj\Debug\net6.0\ref\SE1611_Group3_A3.dll
-D:\ky7_Code\PRN221_Code\SE1611_Group3_A3\bin\Debug\net6.0\wwwroot\images\music.png
+D:\ky7_Code\PRN221_Code\SE1611_Group3_A3\bin\Debug\net6.0\wwwroot\Images\img.jpg

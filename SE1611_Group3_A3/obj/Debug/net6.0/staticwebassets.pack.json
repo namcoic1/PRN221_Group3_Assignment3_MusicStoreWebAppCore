@@ -5,16 +5,20 @@
       "PackagePath": "staticwebassets\\SE1611_Group3_A3.bundle.scp.css"
     },
     {
+      "Id": "D:\\ky7_Code\\PRN221_Code\\SE1611_Group3_A3\\wwwroot\\Images\\img.jpg",
+      "PackagePath": "staticwebassets\\Images\\img.jpg"
+    },
+    {
+      "Id": "D:\\ky7_Code\\PRN221_Code\\SE1611_Group3_A3\\wwwroot\\Images\\placeholder.gif",
+      "PackagePath": "staticwebassets\\Images\\placeholder.gif"
+    },
+    {
       "Id": "D:\\ky7_Code\\PRN221_Code\\SE1611_Group3_A3\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
       "Id": "D:\\ky7_Code\\PRN221_Code\\SE1611_Group3_A3\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
-    },
-    {
-      "Id": "D:\\ky7_Code\\PRN221_Code\\SE1611_Group3_A3\\wwwroot\\images\\music.png",
-      "PackagePath": "staticwebassets\\images\\music.png"
     },
     {
       "Id": "D:\\ky7_Code\\PRN221_Code\\SE1611_Group3_A3\\wwwroot\\js\\site.js",

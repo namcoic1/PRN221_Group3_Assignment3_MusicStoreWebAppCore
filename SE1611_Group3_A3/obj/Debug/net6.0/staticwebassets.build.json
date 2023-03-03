@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "NxDtfIRrUchuRcwNhl1/ALirfvSnnAfRZDJLgzg6EPk=",
+  "Hash": "/4NhpVB1fx6YqrEa3B8blI3nqA5F7Du6HbjlIcNLg6o=",
   "Source": "SE1611_Group3_A3",
   "BasePath": "_content/SE1611_Group3_A3",
   "Mode": "Default",
@@ -85,12 +85,12 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "D:\\ky7_Code\\PRN221_Code\\SE1611_Group3_A3\\wwwroot\\images\\music.png",
+      "Identity": "D:\\ky7_Code\\PRN221_Code\\SE1611_Group3_A3\\wwwroot\\Images\\img.jpg",
       "SourceId": "SE1611_Group3_A3",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\ky7_Code\\PRN221_Code\\SE1611_Group3_A3\\wwwroot\\",
       "BasePath": "_content/SE1611_Group3_A3",
-      "RelativePath": "images/music.png",
+      "RelativePath": "Images/img.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -99,7 +99,24 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Always",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\music.png"
+      "OriginalItemSpec": "wwwroot\\Images\\img.jpg"
+    },
+    {
+      "Identity": "D:\\ky7_Code\\PRN221_Code\\SE1611_Group3_A3\\wwwroot\\Images\\placeholder.gif",
+      "SourceId": "SE1611_Group3_A3",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ky7_Code\\PRN221_Code\\SE1611_Group3_A3\\wwwroot\\",
+      "BasePath": "_content/SE1611_Group3_A3",
+      "RelativePath": "Images/placeholder.gif",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\placeholder.gif"
     },
     {
       "Identity": "D:\\ky7_Code\\PRN221_Code\\SE1611_Group3_A3\\wwwroot\\js\\site.js",
