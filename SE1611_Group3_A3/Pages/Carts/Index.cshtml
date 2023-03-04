@@ -15,7 +15,12 @@
 
     User user = null;
     MusicStoreContext context = new MusicStoreContext();
-    user = context.Users.First();
+
+    if (HttpContext.Session.GetString("user") != null)
+    {
+        string json = HttpContext.Session.GetString("user");
+        user = JsonConvert.DeserializeObject<User>(json);
+    }
 
     bool is_disable = ((total == 0) || (user == null)) ? true : false;
 }

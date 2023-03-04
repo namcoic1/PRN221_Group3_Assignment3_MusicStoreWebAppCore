@@ -9,7 +9,7 @@
 <h1>Checkout</h1>
 <h4>Order</h4>
 <hr />
-<form method="post">
+<form method="post" id="form_checkout">
     <div class="row">
         <div class="col-md-6">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
@@ -62,7 +62,7 @@
             <div class="form-group">
                 <label class="control-label" style="visibility:hidden">order</label>
                 <div class="d-flex justify-content-center">
-                    <input type="submit" value="Order" class="btn btn-primary" />
+                    <input class="btn btn-primary" value="Order" data-bs-toggle="modal" type="button" data-bs-target="#exampleModal" />
                 </div>
             </div>
             <input asp-for="@Model.Order.OrderDate" hidden class="form-control" />
@@ -70,6 +70,42 @@
         </div>
     </div>
 </form>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Order</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Do you want to order ?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" onclick="$('#form_checkout').submit()">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+<p>@ViewBag.message</p>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+@if (ViewBag.message == "success")
+{
+    <script>
+        swal({
+            title: "Order success",
+            text: "Thanks you to comming!",
+            icon: "success",
+            button: "OK",
+        }).then(function () {
+            window.location = "../Index";
+        });
+    </script>
+}
 
 
 @section Scripts {

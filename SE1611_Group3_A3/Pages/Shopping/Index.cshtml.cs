@@ -1,4 +1,6 @@
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.DotNet.Scaffolding.Shared.Messaging;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using SE1611_Group3_A3.Models;
@@ -33,8 +35,8 @@ namespace SE1611_Group3_A3.Pages.Shopping
             GenreId = genreId;
 
             IQueryable<Album> albumsIQ = from s in _context.Albums
-                                             select s;
-            if(genreId != 0)
+                                         select s;
+            if (genreId != 0)
             {
                 albumsIQ = albumsIQ.Where(album => (album.GenreId == genreId || GenreId == -1));
             }
@@ -50,6 +52,22 @@ namespace SE1611_Group3_A3.Pages.Shopping
 
             albums = await PaginatedList<Album>.CreateAsync(
                 albumsIQ.AsNoTracking(), PageIndex, pageSize);
+        }
+
+        public async Task OnPostAsync(int? pageIndex, int genreId, string search, int albumId)
+        {
+
+            var found = _context.Carts.FirstOrDefault(cart => cart.AlbumId == albumId);
+            if (found != null)
+            {
+                found.Count += 1;
+            }
+            else
+            {
+                var entry = _context.Add(new Cart("user", albumId, 1, DateTime.UtcNow.Date));
+            }
+            await _context.SaveChangesAsync();
+            await OnGetAsync(pageIndex, genreId, search);
         }
     }
 }

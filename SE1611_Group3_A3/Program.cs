@@ -1,10 +1,12 @@
+using Microsoft.EntityFrameworkCore;
 using SE1611_Group3_A3.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
-builder.Services.AddSingleton<MusicStoreContext>();
+builder.Services.AddDbContext<MusicStoreContext>();
+builder.Services.AddSession();
 
 var app = builder.Build();
 
@@ -25,4 +27,16 @@ app.UseAuthorization();
 
 app.MapRazorPages();
 
+app.UseSession();
+
+MusicStoreContext context = new MusicStoreContext();
+List<Cart> list_cart = context.Carts.ToList();
+foreach(Cart cart in list_cart)
+{
+    context.Carts.Remove(cart);
+}
+context.SaveChanges();
+
 app.Run();
+
+

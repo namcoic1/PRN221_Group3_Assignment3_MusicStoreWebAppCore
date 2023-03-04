@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json;
 using SE1611_Group3_A3.Models;
 using System.Diagnostics;
 
@@ -14,7 +15,11 @@ namespace SE1611_Group3_A3.Pages.Carts
         {
             User user = null;
             MusicStoreContext context = new MusicStoreContext();
-            user = context.Users.First();
+            if (HttpContext.Session.GetString("user") != null)
+            {
+                string json = HttpContext.Session.GetString("user");
+                user = JsonConvert.DeserializeObject<User>(json);
+            }
 
             if (user != null)
             {
@@ -42,6 +47,7 @@ namespace SE1611_Group3_A3.Pages.Carts
                 };
                 Debug.WriteLine("check");
             }
+
         }
 
         public void OnPost()
@@ -87,8 +93,7 @@ namespace SE1611_Group3_A3.Pages.Carts
                 context.Carts.Remove(cart);
             }
             context.SaveChanges();
+            ViewData["message"] = "success";
         }
-
-
     }
 }

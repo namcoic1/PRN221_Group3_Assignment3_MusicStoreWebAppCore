@@ -1,4 +1,19 @@
-﻿<!DOCTYPE html>
+﻿@using SE1611_Group3_A3.Models;
+@using Microsoft.AspNetCore.Http;
+@using Newtonsoft.Json.Serialization;
+@using Newtonsoft.Json;
+@{
+    User user = null;
+    MusicStoreContext context = new MusicStoreContext();
+    int size = context.Carts.ToList().Count;
+
+    if (Context.Session.GetString("user") != null)
+    {
+        string json = Context.Session.GetString("user");
+        user = JsonConvert.DeserializeObject<User>(json);
+    }
+}
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -12,8 +27,7 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-black border-bottom box-shadow mb-3 d-flex justify-content-between">
             <div class="container">
-                <img src="~/Images/img.jpg" style="height:50px;width:50px;" />
-                <a class="navbar-brand text-white" asp-area="" asp-page="/Index">Music Store</a>
+                <a class="navbar-brand text-white" asp-area="" asp-page="/Index"><img src="~/images/music.png" style="height:50px; width:50px;" />Music Store</a>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
@@ -26,16 +40,26 @@
                             <a class="nav-link text-white" asp-area="" asp-page="/Shopping/Index">Shopping</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" asp-area="" asp-page="/Privacy">Cart(0)</a>
+                            <a class="nav-link text-white" asp-area="" asp-page="/Carts/Index">Cart(@size)</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" asp-area="" asp-page="/Albums/Index">Album</a>
+                            @if (user != null && user.Role == 1)
+                            {
+                                <a class="nav-link text-white" asp-area="" asp-page="/Albums/Index">Album</a>
+                            }
                         </li>
                     </ul>
                 </div>
             </div>
             <div class="container w-25 justify-content-end">
-                <a class="nav-link text-white" asp-area="" asp-page="/Index">Login</a>
+                @if (user != null)
+                {
+                    <a class="nav-link text-white" asp-area="" asp-page="/Login/Login" asp-page-handler="Logout">Logout (@user.UserName)</a>
+                }
+                else
+                {
+                    <a class="nav-link text-white" asp-area="" asp-page="/Login/Login">Login</a>
+                }
             </div>
         </nav>
     </header>
@@ -47,7 +71,7 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2023 - SE1611_Group3 - <a asp-area="" asp-page="/Privacy">Privacy</a>
+            &copy; 2023 - SE1611, Group3: ChieuNDHE151294, NamNHHE151296, ThanhPNHE151285, DaoTVHE151293 <a asp-area="" asp-page="/Privacy">Privacy</a>
         </div>
     </footer>
 
