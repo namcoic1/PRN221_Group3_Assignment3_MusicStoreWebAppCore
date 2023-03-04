@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using SE1611_Group3_A3.Models;
 
@@ -20,6 +21,12 @@ namespace SE1611_Group3_A3.Pages.Albums
 
         [BindProperty]
       public Album Album { get; set; }
+        [BindProperty]
+        public Artist Artist { get; set; }
+        [BindProperty]
+        public Genre Genre { get; set; }
+
+
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -29,14 +36,21 @@ namespace SE1611_Group3_A3.Pages.Albums
             }
 
             var album = await _context.Albums.FirstOrDefaultAsync(m => m.AlbumId == id);
-
+            
             if (album == null)
             {
                 return NotFound();
             }
-            else 
+            else
             {
                 Album = album;
+                var artist = await _context.Artists.FirstOrDefaultAsync(m => m.ArtistId == album.ArtistId);
+                var genre = await _context.Genres.FirstOrDefaultAsync(m => m.GenreId == album.GenreId);
+                if(artist != null && genre != null)
+                {
+                    Artist = artist;
+                    Genre= genre;
+                }
             }
             return Page();
         }

@@ -3,6 +3,7 @@
 
 @{
     ViewData["Title"] = "Index";
+    
 }
 
 <h1>Index</h1>
@@ -41,7 +42,7 @@
                 @Html.DisplayFor(modelItem => item.Price)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.AlbumUrl)
+                <img src="@Html.DisplayFor(modelItem =>item.AlbumUrl)" width="200px"/>
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Artist.ArtistId)

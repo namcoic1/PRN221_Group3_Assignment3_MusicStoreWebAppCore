@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -13,14 +15,23 @@ namespace SE1611_Group3_A3.Pages.Albums
     public class EditModel : PageModel
     {
         private readonly SE1611_Group3_A3.Models.MusicStoreContext _context;
+        private readonly IWebHostEnvironment _hostEnvironment;
 
-        public EditModel(SE1611_Group3_A3.Models.MusicStoreContext context)
+        public EditModel(SE1611_Group3_A3.Models.MusicStoreContext context, IWebHostEnvironment hostEnvironment)
         {
             _context = context;
+            _hostEnvironment = hostEnvironment;
         }
 
         [BindProperty]
         public Album Album { get; set; } = default!;
+
+        [Required(ErrorMessage = "Must choose at least one file")]
+        [DataType(DataType.Upload)]
+        [FileExtensions(Extensions = "png,jpg,jpeg,gif")]
+        [Display(Name = "Choose a file to upload")]
+        [BindProperty]
+        public IFormFile FileUpload { get; set; }
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -35,8 +46,8 @@ namespace SE1611_Group3_A3.Pages.Albums
                 return NotFound();
             }
             Album = album;
-           ViewData["ArtistId"] = new SelectList(_context.Artists, "ArtistId", "ArtistId");
-           ViewData["GenreId"] = new SelectList(_context.Genres, "GenreId", "GenreId");
+            ViewData["ArtistName"] = new SelectList(_context.Artists, "ArtistId", "Name");
+            ViewData["GenreName"] = new SelectList(_context.Genres, "GenreId", "Name");
             return Page();
         }
 
@@ -44,9 +55,20 @@ namespace SE1611_Group3_A3.Pages.Albums
         // For more details, see https://aka.ms/RazorPagesCRUD.
         public async Task<IActionResult> OnPostAsync()
         {
-            if (!ModelState.IsValid)
+            //if (!ModelState.IsValid)
+            //{
+            //    return Page();
+            //}
+            if (FileUpload != null)
             {
-                return Page();
+
+                var file = Path.Combine(_hostEnvironment.WebRootPath, "Images", FileUpload.FileName);
+                using (var fileStream = new FileStream(file, FileMode.Create))
+                {
+                    await FileUpload.CopyToAsync(fileStream);
+
+                }
+                Album.AlbumUrl = "/Images/" + FileUpload.FileName;
             }
 
             _context.Attach(Album).State = EntityState.Modified;

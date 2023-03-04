@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\TERM_7\\PRN221\\git_control\\assignment_3\\ChieuND\\PRN221_Group3_Assignment3_MusicStoreWebAppCore\\SE1611_Group3_A3\\SE1611_Group3_A3.csproj": {}
+    "D:\\UploadProject_Copy\\SE1611_Group3_A3\\SE1611_Group3_A3.csproj": {}
   },
   "projects": {
-    "D:\\TERM_7\\PRN221\\git_control\\assignment_3\\ChieuND\\PRN221_Group3_Assignment3_MusicStoreWebAppCore\\SE1611_Group3_A3\\SE1611_Group3_A3.csproj": {
+    "D:\\UploadProject_Copy\\SE1611_Group3_A3\\SE1611_Group3_A3.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\TERM_7\\PRN221\\git_control\\assignment_3\\ChieuND\\PRN221_Group3_Assignment3_MusicStoreWebAppCore\\SE1611_Group3_A3\\SE1611_Group3_A3.csproj",
+        "projectUniqueName": "D:\\UploadProject_Copy\\SE1611_Group3_A3\\SE1611_Group3_A3.csproj",
         "projectName": "SE1611_Group3_A3",
-        "projectPath": "D:\\TERM_7\\PRN221\\git_control\\assignment_3\\ChieuND\\PRN221_Group3_Assignment3_MusicStoreWebAppCore\\SE1611_Group3_A3\\SE1611_Group3_A3.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "D:\\TERM_7\\PRN221\\git_control\\assignment_3\\ChieuND\\PRN221_Group3_Assignment3_MusicStoreWebAppCore\\SE1611_Group3_A3\\obj\\",
+        "projectPath": "D:\\UploadProject_Copy\\SE1611_Group3_A3\\SE1611_Group3_A3.csproj",
+        "packagesPath": "C:\\Users\\win\\.nuget\\packages\\",
+        "outputPath": "D:\\UploadProject_Copy\\SE1611_Group3_A3\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\win\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
