@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Xml.Linq;
 
 namespace SE1611_Group3_A3.Models
 {
@@ -9,6 +11,8 @@ namespace SE1611_Group3_A3.Models
         public string CartId { get; set; } = null!;
         public int AlbumId { get; set; }
         public int Count { get; set; }
+        [Display(Name = "Date Created")]
+        [DataType(DataType.Date)]
         public DateTime DateCreated { get; set; }
 
         public virtual Album Album { get; set; } = null!;
