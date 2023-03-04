@@ -16,6 +16,8 @@ namespace SE1611_Group3_A3.Models
         {
         }
 
+        
+
         public virtual DbSet<Album> Albums { get; set; } = null!;
         public virtual DbSet<Artist> Artists { get; set; } = null!;
         public virtual DbSet<Cart> Carts { get; set; } = null!;
@@ -158,4 +160,5 @@ namespace SE1611_Group3_A3.Models
 
         partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
     }
+    
 }
