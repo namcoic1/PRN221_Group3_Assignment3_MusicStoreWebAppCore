@@ -1,0 +1,115 @@
+﻿@page
+@model SE1611_Group3_A3.Pages.Carts.CheckoutModel
+<style>
+    label {
+        font-weight: 700;
+        margin-top: 10px;
+    }
+</style>
+<h1>Checkout</h1>
+<h4>Order</h4>
+<hr />
+<form method="post" id="form_checkout">
+    <div class="row">
+        <div class="col-md-6">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="@Model.Order.FirstName" class="control-label"></label>
+                <input asp-for="@Model.Order.FirstName" class="form-control" />
+                <span asp-validation-for="@Model.Order.FirstName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.Order.LastName" class="control-label"></label>
+                <input asp-for="@Model.Order.LastName" class="form-control" />
+                <span asp-validation-for="@Model.Order.LastName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.Order.Address" class="control-label"></label>
+                <input asp-for="@Model.Order.Address" class="form-control" />
+                <span asp-validation-for="@Model.Order.Address" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.Order.City" class="control-label"></label>
+                <input asp-for="@Model.Order.City" class="form-control" />
+                <span asp-validation-for="@Model.Order.City" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.Order.State" class="control-label"></label>
+                <input asp-for="@Model.Order.State" class="form-control" />
+                <span asp-validation-for="@Model.Order.State" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label asp-for="@Model.Order.Country" class="control-label"></label>
+                <input asp-for="@Model.Order.Country" class="form-control" />
+                <span asp-validation-for="@Model.Order.Country" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.Order.Phone" class="control-label"></label>
+                <input asp-for="@Model.Order.Phone" class="form-control" />
+                <span asp-validation-for="@Model.Order.Phone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.Order.Email" class="control-label"></label>
+                <input asp-for="@Model.Order.Email" class="form-control" />
+                <span asp-validation-for="@Model.Order.Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.Order.Total" class="control-label">Total</label>
+                <input readonly asp-for="@Model.Order.Total" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label class="control-label" style="visibility:hidden">order</label>
+                <div class="d-flex justify-content-center">
+                    <input class="btn btn-primary" value="Order" data-bs-toggle="modal" type="button" data-bs-target="#exampleModal" />
+                </div>
+            </div>
+            <input asp-for="@Model.Order.OrderDate" hidden class="form-control" />
+            <input asp-for="@Model.Order.UserName" hidden class="form-control" />
+        </div>
+    </div>
+</form>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Order</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Do you want to order ?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" onclick="$('#form_checkout').submit()">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+<p>@ViewBag.message</p>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+@if (ViewBag.message == "success")
+{
+    <script>
+        swal({
+            title: "Order success",
+            text: "Thanks you to comming!",
+            icon: "success",
+            button: "OK",
+        }).then(function () {
+            window.location = "../Index";
+        });
+    </script>
+}
+
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

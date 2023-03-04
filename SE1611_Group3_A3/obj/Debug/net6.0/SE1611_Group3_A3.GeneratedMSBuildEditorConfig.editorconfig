@@ -9,61 +9,73 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = SE1611_Group3_A3
 build_property.RootNamespace = SE1611_Group3_A3
-build_property.ProjectDir = D:\ky7_Code\PRN221_Code\SE1611_Group3_A3\
+build_property.ProjectDir = D:\TERM_7\PRN221\git_control\assignment_3\ChieuND\PRN221_Group3_Assignment3_MusicStoreWebAppCore\SE1611_Group3_A3\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\ky7_Code\PRN221_Code\SE1611_Group3_A3
+build_property.MSBuildProjectDirectory = D:\TERM_7\PRN221\git_control\assignment_3\ChieuND\PRN221_Group3_Assignment3_MusicStoreWebAppCore\SE1611_Group3_A3
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/ky7_Code/PRN221_Code/SE1611_Group3_A3/Pages/Albums/Create.cshtml]
+[D:/TERM_7/PRN221/git_control/assignment_3/ChieuND/PRN221_Group3_Assignment3_MusicStoreWebAppCore/SE1611_Group3_A3/Pages/Albums/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWxidW1zXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ky7_Code/PRN221_Code/SE1611_Group3_A3/Pages/Albums/Delete.cshtml]
+[D:/TERM_7/PRN221/git_control/assignment_3/ChieuND/PRN221_Group3_Assignment3_MusicStoreWebAppCore/SE1611_Group3_A3/Pages/Albums/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWxidW1zXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ky7_Code/PRN221_Code/SE1611_Group3_A3/Pages/Albums/Details.cshtml]
+[D:/TERM_7/PRN221/git_control/assignment_3/ChieuND/PRN221_Group3_Assignment3_MusicStoreWebAppCore/SE1611_Group3_A3/Pages/Albums/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWxidW1zXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ky7_Code/PRN221_Code/SE1611_Group3_A3/Pages/Albums/Edit.cshtml]
+[D:/TERM_7/PRN221/git_control/assignment_3/ChieuND/PRN221_Group3_Assignment3_MusicStoreWebAppCore/SE1611_Group3_A3/Pages/Albums/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWxidW1zXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ky7_Code/PRN221_Code/SE1611_Group3_A3/Pages/Albums/Index.cshtml]
+[D:/TERM_7/PRN221/git_control/assignment_3/ChieuND/PRN221_Group3_Assignment3_MusicStoreWebAppCore/SE1611_Group3_A3/Pages/Albums/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWxidW1zXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ky7_Code/PRN221_Code/SE1611_Group3_A3/Pages/Error.cshtml]
+[D:/TERM_7/PRN221/git_control/assignment_3/ChieuND/PRN221_Group3_Assignment3_MusicStoreWebAppCore/SE1611_Group3_A3/Pages/Carts/Checkout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2FydHNcQ2hlY2tvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/TERM_7/PRN221/git_control/assignment_3/ChieuND/PRN221_Group3_Assignment3_MusicStoreWebAppCore/SE1611_Group3_A3/Pages/Carts/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2FydHNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/TERM_7/PRN221/git_control/assignment_3/ChieuND/PRN221_Group3_Assignment3_MusicStoreWebAppCore/SE1611_Group3_A3/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ky7_Code/PRN221_Code/SE1611_Group3_A3/Pages/Index.cshtml]
+[D:/TERM_7/PRN221/git_control/assignment_3/ChieuND/PRN221_Group3_Assignment3_MusicStoreWebAppCore/SE1611_Group3_A3/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ky7_Code/PRN221_Code/SE1611_Group3_A3/Pages/Privacy.cshtml]
+[D:/TERM_7/PRN221/git_control/assignment_3/ChieuND/PRN221_Group3_Assignment3_MusicStoreWebAppCore/SE1611_Group3_A3/Pages/Login/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW5cTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/TERM_7/PRN221/git_control/assignment_3/ChieuND/PRN221_Group3_Assignment3_MusicStoreWebAppCore/SE1611_Group3_A3/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ky7_Code/PRN221_Code/SE1611_Group3_A3/Pages/Shared/_ValidationScriptsPartial.cshtml]
+[D:/TERM_7/PRN221/git_control/assignment_3/ChieuND/PRN221_Group3_Assignment3_MusicStoreWebAppCore/SE1611_Group3_A3/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ky7_Code/PRN221_Code/SE1611_Group3_A3/Pages/Shopping/Index.cshtml]
+[D:/TERM_7/PRN221/git_control/assignment_3/ChieuND/PRN221_Group3_Assignment3_MusicStoreWebAppCore/SE1611_Group3_A3/Pages/Shopping/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hvcHBpbmdcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ky7_Code/PRN221_Code/SE1611_Group3_A3/Pages/_ViewImports.cshtml]
+[D:/TERM_7/PRN221/git_control/assignment_3/ChieuND/PRN221_Group3_Assignment3_MusicStoreWebAppCore/SE1611_Group3_A3/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ky7_Code/PRN221_Code/SE1611_Group3_A3/Pages/_ViewStart.cshtml]
+[D:/TERM_7/PRN221/git_control/assignment_3/ChieuND/PRN221_Group3_Assignment3_MusicStoreWebAppCore/SE1611_Group3_A3/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ky7_Code/PRN221_Code/SE1611_Group3_A3/Pages/Shared/_Layout.cshtml]
+[D:/TERM_7/PRN221/git_control/assignment_3/ChieuND/PRN221_Group3_Assignment3_MusicStoreWebAppCore/SE1611_Group3_A3/Pages/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-zcl037c7j9
