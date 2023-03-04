@@ -10267,11 +10267,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\UploadProject_Copy\\SE1611_Group3_A3\\SE1611_Group3_A3.csproj",
+      "projectUniqueName": "D:\\UploadProject\\PRN221_Group3_Assignment3_MusicStoreWebAppCore\\SE1611_Group3_A3\\SE1611_Group3_A3.csproj",
       "projectName": "SE1611_Group3_A3",
-      "projectPath": "D:\\UploadProject_Copy\\SE1611_Group3_A3\\SE1611_Group3_A3.csproj",
+      "projectPath": "D:\\UploadProject\\PRN221_Group3_Assignment3_MusicStoreWebAppCore\\SE1611_Group3_A3\\SE1611_Group3_A3.csproj",
       "packagesPath": "C:\\Users\\win\\.nuget\\packages\\",
-      "outputPath": "D:\\UploadProject_Copy\\SE1611_Group3_A3\\obj\\",
+      "outputPath": "D:\\UploadProject\\PRN221_Group3_Assignment3_MusicStoreWebAppCore\\SE1611_Group3_A3\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\NuGetPackages"
