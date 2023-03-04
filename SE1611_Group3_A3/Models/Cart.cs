@@ -12,5 +12,13 @@ namespace SE1611_Group3_A3.Models
         public DateTime DateCreated { get; set; }
 
         public virtual Album Album { get; set; } = null!;
+
+        public Cart(string cartId, int albumId, int count, DateTime dateCreated)
+        {
+            CartId = cartId;
+            AlbumId = albumId;
+            Count = count;
+            DateCreated = dateCreated;
+        }
     }
 }

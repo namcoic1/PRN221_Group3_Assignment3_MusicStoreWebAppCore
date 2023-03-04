@@ -64,20 +64,27 @@
                         <p>Genre: @genre.Name</p>
                     }
                 }
-                <button class="bg-secondary text-white">Add to cart</button>
+                <form method="post">
+                    <input asp-route-genreId="@Model.GenreId"
+                       asp-route-pageIndex="@(Model.albums.PageIndex)"
+                       asp-route-search="@Model.Search"
+                       asp-route-albumId="@album.AlbumId"
+                       type="submit" class="bg-secondary text-white" onclick="myFunction('@(album.Title)');" value="Add to cart" />
+                </form>
             </div>
         }
     </div>
 
 
     <div style="margin-top: 50px;">
+
         @{
             var prevDisabled = !Model.albums.HasPreviousPage ? "disabled" : "";
             var nextDisabled = !Model.albums.HasNextPage ? "disabled" : "";
         }
 
         <a asp-page="./Index"
-            asp-route-genreId ="@Model.GenreId"
+           asp-route-genreId="@Model.GenreId"
            asp-route-pageIndex="@(Model.albums.PageIndex - 1)"
            asp-route-search="@Model.Search"
            class="btn btn-primary @prevDisabled">
@@ -98,4 +105,10 @@
 
 
 </section>
+
+<script>
+    function myFunction(aTitle) {
+        alert("Add album " + aTitle + " to cart successfully!");
+    }
+</script>
 
