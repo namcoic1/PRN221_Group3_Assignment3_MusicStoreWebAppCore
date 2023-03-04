@@ -1,0 +1,86 @@
+﻿@page
+@model SE1611_Group3_A3.Pages.Carts.IndexModel
+@using SE1611_Group3_A3.Models;
+@using Microsoft.AspNetCore.Http;
+@using Newtonsoft.Json.Serialization;
+@using Newtonsoft.Json;
+
+@{
+    ViewData["Title"] = "Cart";
+    decimal total = 0;
+    @foreach (var item in Model.Cart)
+    {
+        total += item.Count * item.Album.Price;
+    }
+
+    User user = null;
+    MusicStoreContext context = new MusicStoreContext();
+
+    if (HttpContext.Session.GetString("user") != null)
+    {
+        string json = HttpContext.Session.GetString("user");
+        user = JsonConvert.DeserializeObject<User>(json);
+    }
+
+    bool is_disable = ((total == 0) || (user == null)) ? true : false;
+}
+
+<h1>Cart</h1>
+
+<p>
+    @if (is_disable)
+    {
+        <button disabled class="btn btn-primary">
+            Check out
+        </button>
+    }
+    else
+    {
+        <a asp-page="./Checkout" class="btn btn-primary text-white">
+            Check out
+        </a>
+    }
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Cart[0].Album)
+            </th>
+            <th>
+                Price
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cart[0].Count)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cart[0].DateCreated)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Cart)
+        {
+            <tr>
+                <td>
+                    <a asp-page="./Index" asp-route-add="@item.RecordId" class="text-decoration-none">@Html.DisplayFor(modelItem => item.Album.Title)</a>
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Album.Price)
+                </td>
+                <td>
+                    @item.Count
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DateCreated)
+                </td>
+                <td>
+                    <a asp-page="./Index" asp-route-del="@item.RecordId" class="text-decoration-none">Remove from cart</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<br />
+<div class="text-center fs-4"><b>Total: @total</b></div>
